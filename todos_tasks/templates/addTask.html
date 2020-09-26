@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Enter thee tasks to be added</h1>
+<form action="/">
+    <input id="task" name="task" type="text">
+    <input id="Add" name="add" type="submit">
+</form>
+<script>
+    document.querySelector("#task").onkeyup = function() {
+        if(document.querySelector("#task").value === ''){
+            document.querySelector("#Add").disabled = true;
+        }
+        else{
+            document.querySelector("#Add").disabled = false;
+        }
+    }
+</script>
+{% endblock %}

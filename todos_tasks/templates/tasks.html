@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Tasks to be done:</h1>
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+    <!-- <form action="/addTask">
+        <input name="add task" type="submit">
+    </form> -->
+    <a href="/addTask">Add a text</a>
+{% endblock %}
